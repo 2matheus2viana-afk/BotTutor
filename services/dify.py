@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-DIFY_API_KEY = os.getenv("DIFY_API_KEY")
+DIFY_API_KEY = os.getenv("DIFY_API_KEY", "").strip()
 
 URL = "https://api.dify.ai/v1/chat-messages"
 
