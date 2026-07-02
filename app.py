@@ -7,7 +7,9 @@ from services.dify import perguntar_dify
 load_dotenv()
 
 TOKEN = os.getenv("DISCORD_TOKEN")
-
+print("TOKEN existe?", TOKEN is not None)
+print("Tamanho:", len(TOKEN) if TOKEN else 0)
+print("Primeiros 5:", TOKEN[:5] if TOKEN else "None")
 # Configuração das permissões
 intents = discord.Intents.default()
 intents.message_content = True
